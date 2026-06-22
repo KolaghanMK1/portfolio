@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+    --bg: #ffffff;
+    --bg-soft: #f3f4ef;
+    --ink: #1c1d1b;
+    --ink-muted: #63655d;
+    --accent: #1f6f5c;
+    --accent-soft: #e8a64a;
+    --border: #e4e5e0;
+    --radius: 10px;
+    --max-width: 960px;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-display);
+    line-height: 1.15;
+    margin: 0 0 0.5em;
+}
+
+p {
+    margin: 0 0 1em;
+    color: var(--ink-muted);
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent-soft);
+    border-radius: 2px;
+    display: inline-block;
+}
+
+/* Navigation */
+.nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.logo-mark {
+    width: 14px;
+    height: 14px;
+    background: var(--accent);
+    border-radius: 3px;
+}
+
+.nav nav {
+    display: flex;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+}
+
+.nav nav a {
+    position: relative;
+    font-size: 0.95rem;
+    color: var(--ink-muted);
+    padding-bottom: 4px;
+}
+
+.nav nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+.nav nav a:hover::after,
+.nav nav a.active::after {
+    transform: scaleX(1);
+}
+
+.nav nav a.active {
+    color: var(--ink);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #18584a;
+}
+
+.btn-outline {
+    border-color: var(--border);
+    color: var(--ink);
+}
+
+.btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid var(--border);
+}
+
+.footer-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.socials a:hover {
+    color: var(--accent);
+}
+
+/* Accessibilité */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ---------- Page projets ---------- */
+
+.page-intro {
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+}
+
+.page-intro h1 {
+    font-size: clamp(2rem, 4vw, 2.6rem);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+}
+
+.project-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg-soft);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -16px rgba(0, 0, 0, 0.25);
+}
+
+.project-thumb {
+    height: 140px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+}
+
+.project-body {
+    padding: 1.25rem;
+}
+
+.project-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.project-body h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.project-links a {
+    color: var(--ink);
+}
+
+.project-links a:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 720px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
