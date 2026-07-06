@@ -39,7 +39,11 @@
                     <span class="project-tag">C++, Algorithmique, Optimisation</span>
                     <h2>Une IA de Morpion</h2>
                     <p>Ce projet est la deuxième SAE de développement de l'année réalisé dans le milieu de cette
-                        dernière. Le projet consiste à réaliser une IA qui peut jouer à un morpion généralisé.</p>
+                        dernière. Il s'agit d’une IA de morpion généralisé (Gomoku NxN) en C++ basée sur une évaluation incrémentale des alignements.
+                        Le projet repose sur une structure de données interne optimisée (axes, cellules, pièces) permettant de mettre à jour
+                        localement l’état du plateau sans recalcul global. Cette approche réduit fortement le coût de décision et permet à l’IA
+                        de rester performante sur de très grandes grilles (jusqu’à 200×200), tout en privilégiant les menaces adverses et les
+                        opportunités de victoire immédiate.</p>
                     <div class="project-links">
                         <a href="https://github.com/KolaghanMK1/IA-pour-morpion-g-n-ralis-">Voir le projet ↗</a>
                     </div>
@@ -51,8 +55,13 @@
                 <div class="project-body">
                     <span class="project-tag">C++, Algorithmique, Optimisation, Travail de groupe</span>
                     <h2>Le TSP</h2>
-                    <p>Il s'agit de la SAE de graph réalisée en fin d'année dont le but est de résoudre le problème du
-                        voyageur de commerce, un célèbre problème d'optimisation.</p>
+                    <p>Il s'agit de la SAE de graph réalisée en fin d'année.
+                        Projet d’optimisation combinatoire visant à résoudre le problème du voyageur de commerce (TSP) à l’aide d’un algorithme
+                        génétique hybride. Le système combine génération de solutions par GRASP, croisement adapté aux tournées (ERO), recherche
+                        locale 2-opt et mécanismes de diversification pour éviter la stagnation. L’objectif est de minimiser la distance totale
+                        d’une tournée de points géolocalisés tout en conservant de bonnes performances grâce à la parallélisation et à des
+                        heuristiques efficaces.
+                    </p>
                     <div class="project-links">
                         <a href="https://github.com/KolaghanMK1/S2.02-Exploration-Algorithmique">Voir le projet ↗</a>
                     </div>
@@ -65,8 +74,11 @@
                     <span class="project-tag">C++, API, Optimisation, Travail de groupe</span>
                     <h2>Des mini-jeux!</h2>
                     <p>Première SAE de l'année, l'objectif était de développer un menu de séléction de jeu avec des mini
-                        jeux en
-                        C++.</p>
+                        jeux en C++.
+                        L’application propose un menu central extensible
+                        permettant de lancer plusieurs jeux (dont un jeu de cartes complet type “Bataille”) sans modification du cœur du
+                        programme. Le projet met l’accent sur une architecture modulaire, un moteur d’interface textuelle (TUI) optimisé et des
+                        composants réutilisables pour la saisie, l’affichage et la logique de jeu.</p>
                     <div class="project-links">
                         <a href="https://github.com/KolaghanMK1/S1.01-developpement-de-mini-jeux">Voir le projet ↗</a>
                     </div>
@@ -79,7 +91,11 @@
                     <span class="project-tag">C#, Travail de groupe, Gestion de projet, Framework, MonoGame</span>
                     <h2>Un Dino Runner ?</h2>
                     <p>Dernière SAE de l'année, il fallait développer un jeu vidéo avec les outils de notre choix et
-                        faire un véritable travail de gestion de projet.</p>
+                        faire un véritable travail de gestion de projet.
+                        Le jeu réalisé est un runner infini inspiré de Chrome Dino développé en C# avec MonoGame. Le jeu propose une
+                        progression en difficulté, des obstacles variés et un cycle jour/nuit, le tout réalisé sans moteur de jeu afin de gérer
+                        manuellement la boucle de jeu, les collisions et le rendu. Projet réalisé en binôme avec une forte composante technique
+                        et une organisation de type gestion de projet.</p>
                     <div class="project-links">
                         <a href="https://github.com/KolaghanMK1/New-Dino-Runner">Voir le projet ↗</a>
                     </div>
